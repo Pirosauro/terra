@@ -1,0 +1,22 @@
+{
+  "compilerOptions": {
+    "declaration": true,
+    "esModuleInterop": true,
+    "jsx": "react-jsx",
+    "jsxImportSource": "hono/jsx",
+    "module": "ES2022",
+    "moduleResolution": "Bundler",
+    "outDir": "./dist",
+    "skipLibCheck": true,
+    "strict": true,
+    "target": "ES2022",
+    "types": [
+      "node",
+      "vite/client"
+    ]
+  },
+  "include": [
+    "./src",
+    "./types"
+  ]
+}

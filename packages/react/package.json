@@ -1,0 +1,38 @@
+{
+  "name": "@terra/react",
+  "version": "0.1.0",
+  "type": "module",
+  "scripts": {
+    "build": "tsc",
+    "clean": "tsc --build --clean"
+  },
+  "files": [
+    "./dist"
+  ],
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    }
+  },
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org",
+    "access": "public"
+  },
+  "dependencies": {
+    "@terra/islands": "workspace:*",
+    "hono": "^4.3.11",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1"
+  },
+  "devDependencies": {
+    "@hono/vite-dev-server": "^0.12.1",
+    "@types/react": "^18.3.3",
+    "@types/react-dom": "^18.3.0",
+    "typescript": "^5.4.5",
+    "vite": "^5.2.11"
+  },
+  "engines": {
+    "node": "20.*"
+  }
+}

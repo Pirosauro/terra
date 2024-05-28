@@ -1,0 +1,12 @@
+# NodeJS
+node_modules
+dist
+package-lock.json
+yarn.lock
+pnpm-lock.yaml
+bun.lockb
+.wrangler
+.dev.vars
+
+# MacOS
+.DS_Store

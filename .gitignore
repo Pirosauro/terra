@@ -1,0 +1,9 @@
+# NodeJS
+node_modules/
+dist/
+tsconfig.tsbuildinfo
+.wrangler
+.dev.vars
+
+# MacOS
+.DS_Store
