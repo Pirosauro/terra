@@ -90,6 +90,10 @@ export const createClient = async <C, P>({ debug, islands, integrations }: Optio
         return logMessage('Unable to hydrate Island: component "' + name + '" not found', 'warn')
       }
 
+      if (this.parentElement?.closest('terra-island')) {
+        return logMessage('Island "' + name + '" is a descendant of another island', 'info')
+      }
+
       switch (strategy?.type) {
         case 'load':
           await this.hydrate()
@@ -118,7 +122,7 @@ export const createClient = async <C, P>({ debug, islands, integrations }: Optio
      */
     async init(): Promise<HydrationData | undefined> {
       return new Promise<HydrationData | undefined>((resolve, reject) => {
-        const json = this.querySelector('script[data-island]')?.textContent
+        const json = this.querySelector(':scope > script[data-island]')?.textContent
 
         json ? resolve(JSON.parse(json)) : reject()
       })

@@ -60,12 +60,12 @@
   },
   "dependencies": {
     "fdir": "^6.1.1",
-    "hono": "^4.3.11"
+    "hono": "^4.4.4"
   },
   "devDependencies": {
     "@hono/vite-dev-server": "^0.12.1",
     "typescript": "^5.4.5",
-    "vite": "^5.2.11"
+    "vite": "^5.2.13"
   },
   "engines": {
     "node": "20.*"

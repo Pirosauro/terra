@@ -19,7 +19,7 @@ export function withHydration<P>(Component: FC<P>): (props: P & ClientDirective)
 
     // render
     return (
-      <terra-island>
+      <terra-island style={{ display: 'contents' }}>
         <Component {...data.props} />
         <script
           type="application/json"
