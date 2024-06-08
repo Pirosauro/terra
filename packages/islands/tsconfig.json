@@ -2,8 +2,6 @@
   "compilerOptions": {
     "declaration": true,
     "esModuleInterop": true,
-    "jsx": "react-jsx",
-    "jsxImportSource": "hono/jsx",
     "module": "ES2022",
     "moduleResolution": "Bundler",
     "outDir": "./dist",
@@ -18,5 +16,8 @@
   "include": [
     "./src",
     "./types"
+  ],
+  "exclude": [
+    "./tests"
   ]
 }
