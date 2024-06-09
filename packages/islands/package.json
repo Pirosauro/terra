@@ -76,6 +76,7 @@
     "node": "20.*"
   },
   "jest": {
+    "transform": {},
     "testMatch": [
       "**/tests/unit/**/*.spec.js"
     ],

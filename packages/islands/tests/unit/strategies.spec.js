@@ -2,9 +2,11 @@
 import { expect, jest, it } from '@jest/globals'
 import { listenMediaOnce, observeOnce, idle } from '../../dist/strategies.js'
 
+const __MQ = '(min-width: 500px)'
+
 // mock for window.matchMedia
 const matchMediaMock = jest.fn().mockImplementation(query => ({
-  matches: false,
+  matches: query === __MQ,
   media: query,
   onchange: null,
   addEventListener: jest.fn(),
@@ -37,13 +39,27 @@ beforeAll(() => {
 
 describe('listenMediaOnce', () => {
   it('should execute the callback function when the media query matches', () => {
-    const callback = jest.fn()
-    const mediaQueryList = matchMediaMock('(min-width: 500px)')
+    const callbackMock = jest.fn()
+    const cleanup = listenMediaOnce(__MQ, callbackMock)
 
-    mediaQueryList.matches = true // simulate a matching media query
+    expect(callbackMock).toHaveBeenCalled()
 
-    listenMediaOnce('(min-width: 500px)', callback)
-    expect(callback).toHaveBeenCalled()
+    // simulate a change in media query that does not match
+    const mediaQuery = window.matchMedia(__MQ)
+
+    mediaQuery.matches = false
+
+    mediaQuery.dispatchEvent(new Event('change'))
+
+    expect(callbackMock).toHaveBeenCalledTimes(1) // ensure the callback is not called again
+    cleanup() // ensure the event listener is removed
+
+    mediaQuery.addEventListener.mockClear()
+    mediaQuery.removeEventListener.mockClear()
+    mediaQuery.dispatchEvent(new Event('change'))
+
+    expect(mediaQuery.addEventListener).not.toHaveBeenCalled()
+    expect(mediaQuery.removeEventListener).toHaveBeenCalled()
   })
 })
 

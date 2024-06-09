@@ -6,6 +6,7 @@ type Props = {
   client?: string
 }
 
+// testing island inside island
 const Badge: FunctionComponent<Props> = ({ client, server }) => {
   const [env, setEnv] = useState<string>(server || 'server')
 

@@ -3,6 +3,7 @@ import { registerRoutes } from '../../dist/router.js'
 
 describe('registerRoutes', () => {
   it('should register routes correctly', async () => {
+    const consoleLogSpy = jest.spyOn(console, 'log').mockImplementation(() => { })
     const mockApp = {
       on: jest.fn(),
       notFound: jest.fn(),
@@ -20,5 +21,7 @@ describe('registerRoutes', () => {
     expect(mockApp.on).toHaveBeenCalledTimes(2) // adjust based on actual routes
     expect(mockApp.notFound).toHaveBeenCalledTimes(1)
     expect(mockApp.onError).toHaveBeenCalledTimes(1)
+
+    consoleLogSpy.mockClear()
   })
 })

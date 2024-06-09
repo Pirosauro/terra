@@ -1,40 +1,39 @@
-# Terra - A Meta Framework with Islands Architecture
+# 🌍 Terra: Greener Framework for the Web
 
-Welcome to the Terra project, a modern approach to building scalable and efficient web applications using the islands architecture. This project leverages the power of Hono, a lightning-fast framework for the edge, and Vite, a modern frontend build tool, to deliver a seamless development experience.
+Terra is a fresh approach to building scalable and efficient web applications that prioritize reducing the environmental impact of websites, web apps, and e-commerce platforms. Terra aims to reduce carbon emissions by integrating modern technology and innovative solutions while providing a seamless development experience.
+
+## Why Terra?
+
+Virtually everything has a carbon footprint, even the internet, and every byte of data transferred consumes energy. Terra is here to help reduce that footprint by providing a solution that optimizes the development and performance of web applications.
 
 ## Features
 
-- **Islands Architecture**: reach highest performance by loading interactive components independently.
-- **Vite**: for a fast development experience and optimized production builds.
-- **Hono**: leverage on edge computing capabilities for near-instantaneous global response times.
-- **Framework Indipendent**: natively integrate with various front-end frameworks, like React or Vue.
+- **Vite-Powered Development**: A seamless development experience means you spend less time on the computer, reducing overall carbon emissions.
 
-## Wrappers
+- **Edge-Ready with Hono**: Delivering your content from the edge ensures faster response times and lower energy consumption.
 
-- **React**: ready-to-use.
-- **Preact**: work in progress.
-- **Vue**: planned.
+- **Partial Hydration (Islands Architecture)**: Updating only what's necessary ensures utmost efficiency, saving energy and boosting performance.
 
-Got another framework in mind? Open a new feature request or even better a P.R.!
+- **Minimal Learning Curve**: Seamlessly integrates with frameworks you already know and love, like React and Vue, so you can be immediately operative.
 
 ## Documentation
-To be done.
 
-## Contributing
-Contributions are welcome! If you’d like to help improve Terra, please follow our contributing guidelines.
-
-## Sponsors
-
-This project is proudly sponsored by [**Hobiri**](https://hobiri.com). I am grateful for their commitment to open-source software and community-driven projects.
-
-### Become a Sponsor
-
-I am always open to new partnerships and sponsorship opportunities. If you're interested in sponsoring the Terra project, please reach me out for more information on how you can contribute.
-
-Your sponsorship will help us continue to improve the framework, add support for more front-end libraries, and provide developers with the best possible experience.
+Comprehensive documentation is coming soon. Stay tuned!
 
 ## License
-This project is licensed under the MIT License.
 
-## Acknowledgments
-Thanks to the Vite team for their excellent build tool and to the Hono team for their fantastic edge framework.
+Terra is released under the MIT License, encouraging open collaboration and innovation. If you’d like to help improve Terra, please follow our [contribution guidelines](CONTRIBUTING.md).
+
+## Support Us
+
+Love what we're doing? Consider [sponsoring us](https://github.com/sponsors/your-username) to help keep Terra growing. Your support enables us to continue developing new features, providing top-notch support, and spreading the message of sustainability in tech.
+
+### Sponsors
+
+[**Hobiri**](https://hobiri.com)
+
+---
+
+Let's code a greener future. 🌿
+
+**Happy coding with Terra!**
