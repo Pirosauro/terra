@@ -22,9 +22,11 @@ const Counter: FunctionComponent<PropsWithChildren<Props>> = (props) => {
 
   return (
     <>
-      <BadgeIsland client:load client="hydrated" server="SSR" />
-      <p className={style.counter}>Count: {count}</p>
-      <button onClick={onClickHandler}>Increment</button>
+      <div className={style.badge}>
+        <BadgeIsland client:load client="hydrated" server="SSR" />
+      </div>
+      <p className={style.count}>Count: {count}</p>
+      <button className={style.button} onClick={onClickHandler}>Increment</button>
     </>
   )
 }
