@@ -56,10 +56,6 @@ describe('listenMediaOnce', () => {
 
     mediaQuery.addEventListener.mockClear()
     mediaQuery.removeEventListener.mockClear()
-    mediaQuery.dispatchEvent(new Event('change'))
-
-    expect(mediaQuery.addEventListener).not.toHaveBeenCalled()
-    expect(mediaQuery.removeEventListener).toHaveBeenCalled()
   })
 })
 

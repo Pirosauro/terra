@@ -44,10 +44,12 @@ export default defineConfig(({ mode }) => {
       alias,
     },
     plugins: [
-      build(),
+      build({
+        entry: 'src/index.ts',
+      }),
       devServer({
         adapter,
-        entry: 'src/index.tsx'
+        entry: 'src/index.ts'
       }),
       terraIslands({
         framework: 'react',

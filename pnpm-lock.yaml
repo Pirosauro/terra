@@ -20,8 +20,8 @@ importers:
         specifier: workspace:*
         version: link:../../packages/react
       hono:
-        specifier: ^4.4.4
-        version: 4.4.4
+        specifier: ^4.4.5
+        version: 4.4.5
       nanostores:
         specifier: ^0.10.3
         version: 0.10.3
@@ -37,10 +37,10 @@ importers:
         version: 4.20240605.0
       '@hono/vite-cloudflare-pages':
         specifier: ^0.4.0
-        version: 0.4.0(hono@4.4.4)
+        version: 0.4.0(hono@4.4.5)
       '@hono/vite-dev-server':
         specifier: ^0.12.1
-        version: 0.12.1(hono@4.4.4)
+        version: 0.12.1(hono@4.4.5)
       '@types/react':
         specifier: ^18.3.3
         version: 18.3.3
@@ -51,8 +51,8 @@ importers:
         specifier: ^5.2.13
         version: 5.2.13(@types/node@20.14.2)
       wrangler:
-        specifier: ^3.60.0
-        version: 3.60.0(@cloudflare/workers-types@4.20240605.0)
+        specifier: ^3.60.2
+        version: 3.60.2(@cloudflare/workers-types@4.20240605.0)
 
   packages/islands:
     dependencies:
@@ -985,13 +985,13 @@ packages:
     engines: {node: '>=18.14.1'}
     dev: true
 
-  /@hono/vite-cloudflare-pages@0.4.0(hono@4.4.4):
+  /@hono/vite-cloudflare-pages@0.4.0(hono@4.4.5):
     resolution: {integrity: sha512-+vmfgphNc2DZx457HqrefZmpVVhJmz3bQaDpylBgInt9uPEV+xuFwnTaHwVn00R00HPmJuSDT+9ybvYDPIDQuQ==}
     engines: {node: '>=18.14.1'}
     peerDependencies:
       hono: '*'
     dependencies:
-      hono: 4.4.4
+      hono: 4.4.5
     dev: true
 
   /@hono/vite-dev-server@0.12.1(hono@4.4.4):
@@ -1002,6 +1002,22 @@ packages:
     dependencies:
       '@hono/node-server': 1.11.2
       hono: 4.4.4
+      miniflare: 3.20240605.0
+      minimatch: 9.0.4
+    transitivePeerDependencies:
+      - bufferutil
+      - supports-color
+      - utf-8-validate
+    dev: true
+
+  /@hono/vite-dev-server@0.12.1(hono@4.4.5):
+    resolution: {integrity: sha512-Fm7BXm9onjEaU5OqkLhU4pkdBKenlulrExDSkBxXULF+7NQznHppWnKcDI6A0pvjz0oNykNy5F7QnHhofmnMdQ==}
+    engines: {node: '>=18.14.1'}
+    peerDependencies:
+      hono: '*'
+    dependencies:
+      '@hono/node-server': 1.11.2
+      hono: 4.4.5
       miniflare: 3.20240605.0
       minimatch: 9.0.4
     transitivePeerDependencies:
@@ -2449,6 +2465,10 @@ packages:
 
   /hono@4.4.4:
     resolution: {integrity: sha512-zO5+4K8yf1iuKhBZhwmpZ/0LzPMr8Zt1RugEGM1xvOqgh9DyLb7tslOtoBks4bmm5bIcLtzLCXUpYpXOkwpABA==}
+    engines: {node: '>=16.0.0'}
+
+  /hono@4.4.5:
+    resolution: {integrity: sha512-hyf+1c+gTEo0+xjdYT2e8y4M3HcEy0ARuRZHPRgeRhq/mupkI4j9/qEWVKsyj0se4KhfRnYrld4Tk6z/9veq/Q==}
     engines: {node: '>=16.0.0'}
 
   /html-encoding-sniffer@3.0.0:
@@ -4016,8 +4036,8 @@ packages:
       '@cloudflare/workerd-windows-64': 1.20240605.0
     dev: true
 
-  /wrangler@3.60.0(@cloudflare/workers-types@4.20240605.0):
-    resolution: {integrity: sha512-8lW4E7VAhCVXy7AV7Vom2BsyjekIt15Aa8jnBLsfE2CxalzWQzx49BK25hOYhjHQT4GqBXeoNOZ43FrMQ+SUUA==}
+  /wrangler@3.60.2(@cloudflare/workers-types@4.20240605.0):
+    resolution: {integrity: sha512-lGIuxzaVm8W0ddzwzwZtx3kL/0PUGMZfKBayUzcMq5wGk88aE9UA2lYeGF51EHVXX2yBbnw7Ltw2eXsx2ixNOQ==}
     engines: {node: '>=16.17.0'}
     hasBin: true
     peerDependencies:
